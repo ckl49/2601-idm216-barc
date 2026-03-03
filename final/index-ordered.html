@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pete's Homepage - Ordered</title>
+    <link rel="stylesheet" href="./css/global.css">
+</head>
+<body>
+<div class="iphone-container">
+<div class="content">
+    <h2 class="color-text mb-2" >Welcome to Pete's</h2>
+    <h4 class="mb-4">We're open from 06:00 AM - 3:00 PM today.</h4>
+
+    <a href="./order-status.html">
+        <div class="order-status-container mb-4">
+            <img class="order-status-img" src="./img/order-status.png" alt="order progress graphic">
+            <div class="order-status-text">
+                <div class="order-status-right">
+                    <img class="icon" src="img/timer.png" alt="timer icon">
+                    <h4>Check Order Status</h4>
+                </div>
+                <img class="icon" src="./img/arrow-right.png" alt="right arrow icon">
+            </div>
+        </div>
+    </a>
+
+    <!-- <a href="rewards-after-order.html">
+        <div class="rewards mb-6">
+            <img class="points-rewards" src="./img/points_rewards.jpg" alt="rewards graphics">
+            <h4>View & Redeem Rewards</h4>
+        </div>
+    </a> -->
+
+    <!-- <h2 class="mb-4">Past Orders</h2>
+
+    <div class="past-orders-scroll mb-5">
+        <div class="past-orders" onclick="openModal()">
+            <img class="food-img" src="./img/food/egg-and-cheese-bagel.jpg" alt="egg-and-cheese">
+            <h4>Egg and Cheese</h4>
+            <p>White bagel, tomato, cheese, bacon</p>
+            <div class="price-arrow">
+                <p>$4.00</p>
+                <img class="plus" src="./img/plus.png" alt="plus icon">
+            </div>
+        </div>
+        <div class="past-orders">
+            <img class="food-img" src="./img/food/blt.jpg" alt="blt sandwich">
+            <h4>B.L.T</h4>
+            <p>White bread, tomato, lettuce, bacon, no toast</p>
+            <div class="price-arrow">
+                <p>$6.00</p>
+                <img class="plus" src="./img/plus.png" alt="plus icon">
+            </div>
+        </div>
+        <div class="past-orders">
+            <img class="food-img" src="./img/food/grilled-cheese.jpg" alt="grilled-cheese">
+            <h4>Grilled Cheese</h4>
+            <p>Wheat bread, cheese, level 2 toast</p>
+            <div class="price-arrow">
+                <p>$6.00</p>
+                <img class="plus" src="./img/plus.png" alt="plus icon">
+            </div>
+        </div>
+        <div class="past-orders">
+            <img class="food-img" src="./img/food/chocolate-muffin.jpg" alt="muffin">
+            <h4>Muffin</h4>
+            <p>Chocolate chip, warmed  up</p>
+            <div class="price-arrow">
+                <p>$1.75</p>
+                <img class="plus" src="./img/plus.png" alt="plus icon">
+            </div>
+        </div>
+    </div> -->
+
+    <hr class="mb-4">
+
+    <div class="filter-bar mb-6">
+        <button class="filter-item active" data-filter="All">All</button>
+        <button class="filter-item" data-filter="Breakfast Platters">Breakfast Platters</button>
+        <button class="filter-item" data-filter="Breakfast Sandwiches">Breakfast Sandwiches</button>
+        <button class="filter-item" data-filter="Lunch Sandwiches">Lunch Sandwiches</button>
+        <button class="filter-item" data-filter="Chicken/Beef Steaks">Chicken/Beef Steaks</button>
+        <button class="filter-item" data-filter="Salads">Salads</button>
+        <button class="filter-item" data-filter="Sides">Sides</button>
+        <button class="filter-item" data-filter="Drinks">Drinks</button>
+    </div>
+    <div id="menu-content">
+    
+        <h2 class="mb-4" data-category="Breakfast Sandwiches">Breakfast Sandwiches</h2>
+        <div class="food-card-scroll mb-6" data-category="Breakfast Sandwiches">
+        <a href="./food-item.html" class="past-orders-link">
+            <div class="food-card">
+                <img class="food-img" src="./img/food/egg-and-cheese-bagel.jpg" alt="egg-and-cheese">
+                <p>Egg and Cheese</p>
+                <p>$4.00</p>
+            </div>
+        </a>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/western-omlette-sandwich.png" alt="Western Omelette Breakfast Sandwich">
+                <p>Western Omelette Breakfast Sandwich</p>
+                <p>$5.50</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/blt.jpg" alt="blt">
+                <p>B.L.T</p>
+                <p>$6.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/grilled-cheese.jpg" alt="grillec cheese">
+                <p>Grilled Cheese</p>
+                <p>$3.50</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/bagel-with-cream-cheese.png" alt="bagel with creamed cheese">
+                <p>Bagel with Creamed Cheese</p>
+                <p>$2.00</p>
+            </div>
+        </div>
+    
+        <h2 class="mb-4" data-category="Breakfast Platters">Breakfast Platters</h2>
+        <div class="food-card-scroll mb-6" data-category="Breakfast Platters">
+            <div class="food-card">
+                <img class="food-img" src="./img/food/egg-and-cheese.jpg" alt="egg and cheese platter">
+                <p>Egg and Cheese Platter</p>
+                <p>$4.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/egg-with-breakfast-meat.jpg" alt="egg egg-with-breakfast-meat">
+                <p>Egg with Breakfast Meat</p>
+                <p>$6.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/western-omlette.jpg" alt="western-omlette">
+                <p>Western Omlette</p>
+                <p>$4.00</p>
+            </div>
+        </div>
+    
+        <h2 class="mb-4" data-category="Lunch Sandwiches">Lunch Sandwiches</h2>
+        <div class="food-card-scroll mb-6" data-category="Lunch Sandwiches">
+            <div class="food-card">
+                <img class="food-img" src="./img/food/hotdog.jpg" alt="hotdog">
+                <p>Hot Dog</p>
+                <p>$2.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/hot-sausage.jpg" alt="hot hot-sausage">
+                <p>Hot Sausage</p>
+                <p>$4.50</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/tuna-sandwich.jpg" alt="tuna-sandwich">
+                <p>Tuna Sandwich</p>
+                <p>$7.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/chicken-salad-sandwich.jpg" alt="chicken-salad-sandwich">
+                <p>Chicken Salad Sandwich</p>
+                <p>$5.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/turkey-club.jpg" alt="turkey-club">
+                <p>Turkey Club</p>
+                <p>$6.50</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/ham-club.jpg" alt="ham club">
+                <p>Ham Club</p>
+                <p>$6.50</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/tuna-club.jpg" alt="Tuna Club">
+                <p>Tuna Club</p>
+                <p>$6.50</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/grilled-chicken-club.jpg" alt="Grilled Chicken Club">
+                <p>Grilled Chicken Club</p>
+                <p>$6.50</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/burger.jpg" alt="Burger">
+                <p>Burger</p>
+                <p>$5.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/chicken-salad-sandwich.jpg" alt="Chicken Salad Club">
+                <p>Chicken Salad Club</p>
+                <p>$6.50</p>
+            </div>
+        </div>
+    
+        <h2 class="mb-4" data-category="Chicken/Beef Steaks">Chicken/Beef Steaks</h2>
+        <div class="food-card-scroll mb-6" data-category="Chicken/Beef Steaks">
+            <div class="food-card">
+                <img class="food-img" src="./img/food/buffalo-chicken-cheesesteak.jpg" alt="Buffalo Cheese Steak">
+                <p>Buffalo Cheese Steak</p>
+                <p>$7.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/vegetarian-gyro.jpg" alt="Vegetarian Gyro">
+                <p>Vegetarian Gyro</p>
+                <p>$5.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/pizza-cheesesteak.jpg" alt="Pizza Steak">
+                <p>Pizza Steak</p>
+                <p>$5.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/chicken-gyro.jpg" alt="Chicken Gyro">
+                <p>Chicken Gyro</p>
+                <p>$6.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/cheesesteak.jpg" alt="Cheesesteak">
+                <p>Cheesesteak</p>
+                <p>$6.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/lamb-gyro.jpg" alt="Lamb Gyro">
+                <p>Lamb Gyro</p>
+                <p>$6.00</p>
+            </div>
+        </div>
+    
+        <h2 class="mb-4" data-category="Salads">Salads</h2>
+        <div class="food-card-scroll mb-6" data-category="Salads">
+            <div class="food-card">
+                <img class="food-img" src="./img/food/garden-salad.jpg" alt="Garden Salad">
+                <p>Garden Salad</p>
+                <p>$4.50</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/grilled-chicken-salad.jpg" alt="grilled chicken Salad">
+                <p>Grilled Chicken Salad</p>
+                <p>$7.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/chef-salad.jpg" alt="Chef Salad">
+                <p>Chef Salad</p>
+                <p>$7.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/caesar-salad.jpg" alt="ceaser sald">
+                <p>Ceaser Salad</p>
+                <p>$7.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/cobb-salad.jpg" alt="Cobb Salad">
+                <p>Cobb Salad</p>
+                <p>$7.00</p>
+            </div>
+        </div>
+    
+        <h2 class="mb-4" data-category="Sides">Sides</h2>
+        <div class="food-card-scroll mb-6" data-category="Sides">
+            <div class="food-card">
+                <img class="food-img" src="./img/food/chocolate-muffin.jpg" alt="Muffin">
+                <p>Muffin</p>
+                <p>$1.75</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/toast with jam and butter.jpg" alt="toast with butter/jelly">
+                <p>Toast with butter/jelly</p>
+                <p>$2.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/hashbrowns.jpg" alt="Hash Brown">
+                <p>Hash Brown</p>
+                <p>$1.50</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/bbq-chips.jpg" alt="BBQ chips">
+                <p>BBQ Chips</p>
+                <p>$.075</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/doritos.jpg" alt="Doritos Chips">
+                <p>Doritos Chips</p>
+                <p>$0.75</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/fritos.jpg" alt="Fritos Chips">
+                <p>Fritos Chips</p>
+                <p>$0.75</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/potato-chips.jpg" alt="Lays Chips">
+                <p>Lays Chips</p>
+                <p>$0.75</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/cheetos.jpg" alt="Cheetos Chips">
+                <p>Cheetos Chips</p>
+                <p>$0.75</p>
+            </div>
+        </div>
+    
+        <h2 class="mb-4" data-category="Drinks">Drinks</h2>
+        <div class="food-card-scroll mb-10" data-category="Drinks">
+            <div class="food-card">
+                <img class="food-img" src="./img/food/hot-coffee.jpg" alt="Hot Coffe">
+                <p>Hot Coffe</p>
+                <p>$1.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/hot-tea.jpg" alt="Hot Tea">
+                <p>Hot Tea</p>
+                <p>$1.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/hot-chocolate.jpg" alt="Hot Chocolate">
+                <p>Hot Chocolate</p>
+                <p>$1.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/coke.jpg" alt="Coke">
+                <p>Coke</p>
+                <p>$1.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/diet-coke.jpg" alt="Diet Coke">
+                <p>Diet Coke</p>
+                <p>$1.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/fanta.jpg" alt="Fanta">
+                <p>Fanta</p>
+                <p>$1.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/ginger-ale.jpg" alt="Ginger Ale">
+                <p>Ginger Ale</p>
+                <p>$1.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/pepsi.jpg" alt="Pepsi">
+                <p>Pepsi</p>
+                <p>$1.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/diet-pepsi.jpg" alt="Diet Pepsi">
+                <p>Diet Pepsi</p>
+                <p>$1.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/arnold-palmer.jpg" alt="Arnold Palmer">
+                <p>Arnold Palmer</p>
+                <p>$2.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/vitamin-water.jpg" alt="Vitamin Water">
+                <p>Vitamin Water</p>
+                <p>$2.25</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/gatorade.jpg" alt="Gatorade">
+                <p>Gatorade</p>
+                <p>$2.00</p>
+            </div>
+            <div class="food-card">
+                <img class="food-img" src="./img/food/water.jpg" alt="Water">
+                <p>Water</p>
+                <p>$1.00</p>
+            </div>
+        </div>
+    </div>
+    
+        <div class="nav">
+            <a href="./index.html">
+            <div class="nav-item">
+                <img class="icon" src="./img/home-filled.png" alt="home status icon">
+                <h4>Home</h4>
+            </div>
+            </a>
+            <a href="./favorites.html">
+            <div class="nav-item">
+                <img class="icon" src="./img/heart-empty-nav.png" alt="heart icon">
+                <p>Favorites</p>
+            </div>
+            </a>
+            <a href="./bag.html">
+            <div class="nav-item">
+                <img class="icon" src="./img/bag-empty.png" alt="bag icon">
+                <p>Bag</p>
+            </div>
+            </a>
+            <a href="./account.html">
+            <div class="nav-item">
+                <img class="icon" src="./img/account-empty.png" alt="account icon">
+                <p>Account</p>
+            </div>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+const filterButtons = document.querySelectorAll('.filter-item');
+const headings = document.querySelectorAll('h2[data-category]');
+
+// Store original margin classes for each food-card-scroll
+const originalMargins = {};
+headings.forEach(heading => {
+    const nextScroll = getNextFoodCardScroll(heading);
+    if (nextScroll) {
+        originalMargins[heading.dataset.category] = nextScroll.className.match(/mb-\d+/)?.[0] || '';
+    }
+});
+
+function getNextFoodCardScroll(el) {
+    let next = el.nextElementSibling;
+    while (next && !next.classList.contains('food-card-scroll')) {
+        next = next.nextElementSibling;
+    }
+    return next;
+}
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filter = button.dataset.filter;
+        const menuContent = document.getElementById('menu-content'); // ADD
+
+        menuContent.style.transition = 'opacity 0.2s ease'; // ADD
+        menuContent.style.opacity = '0'; // ADD
+
+        setTimeout(() => { // ADD
+
+            headings.forEach(heading => {
+                const nextScroll = getNextFoodCardScroll(heading);
+
+                heading.style.display = 'none';
+                if (nextScroll) {
+                    nextScroll.style.display = 'none';
+                    nextScroll.classList.remove('grid-view');
+                    nextScroll.classList.remove('mb-10');
+                    nextScroll.classList.remove(...nextScroll.className.split(' ').filter(c => c.startsWith('mb-')));
+                    nextScroll.classList.add(originalMargins[heading.dataset.category]);
+                }
+
+                if (filter === 'All' || heading.dataset.category === filter) {
+                    heading.style.display = 'block';
+                    if (nextScroll) {
+                        if (filter === 'All') {
+                            nextScroll.style.display = 'flex';
+                            nextScroll.classList.remove('grid-view');
+                            nextScroll.classList.remove(...nextScroll.className.split(' ').filter(c => c.startsWith('mb-')));
+                            nextScroll.classList.add(originalMargins[heading.dataset.category]);
+                        } else {
+                            nextScroll.style.display = 'grid';
+                            nextScroll.classList.add('grid-view');
+                            nextScroll.classList.add('mb-10');
+                        }
+                    }
+                }
+            });
+
+            menuContent.style.opacity = '1'; // ADD
+
+        }, 200); // ADD
+    });
+});
+</script>
