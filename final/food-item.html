@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg & Cheese</title>
+    <link rel="stylesheet" href="./css/global.css">
+</head>
+<body>
+<div class="iphone-container">
+    <div class="modal-overlay" 
+        onclick="closeModal()">
+    </div>
+
+    <div class="bottom-modal">
+
+    <!-- Handle (non-scrolling) -->
+    <div class="modal-handle"></div>
+
+    <!-- SCROLLABLE CONTENT -->
+    <div class="modal-content">
+
+        <button class="icon-btn" id="modal-back-btn">
+            <img class="arrow-left mb-3" src="./img/arrow-left.png" alt="left arrow">
+        </button>
+
+        <h2 class="mb-2">
+            Pickup from Pete's
+        </h2>
+        <p class="mb-4">
+            11 N 33rd St, Philadelphia, PA 19104
+        </p>
+
+        <div class="asap-selection mb-2">
+            <p>ASAP (ready in ~12 min)</p>
+        </div>
+
+        <div class="schedule-dropdown">
+
+        <div class="dropdown-time-selection">
+            <label for="time-selection" class="dropdown-header">
+                <h4>Schedule Pickup Time</h4> 
+                <img class="icon arrow" src="./img/arrow-down.png" alt="down arrow">
+            </label>
+            <form action="" class="time-options dropdown-menu" id="time-options">
+                <input type="radio" name="pickup-time" id="1100" value="11:00AM" hidden>
+                <label for="1100">11:00AM</label>
+            
+                <input type="radio" name="pickup-time" id="1115" value="11:15AM" hidden>
+                <label for="1115">11:15AM</label>
+            
+                <input type="radio" name="pickup-time" id="1130" value="11:30AM" hidden>
+                <label for="1130">11:30AM</label>
+            
+                <input type="radio" name="pickup-time" id="1145" value="11:45AM" hidden>
+                <label for="1145">11:45AM</label>
+            
+                <input type="radio" name="pickup-time" id="1200" value="12:00PM" hidden>
+                <label for="1200">12:00PM</label>
+            </form>
+        </div>
+        </div>
+
+        <!-- <div class="dropdown-header">
+            <h4>Schedule Pickup Time</h4>
+            <img class="icon arrow" src="./img/arrow-down.png" alt="down arrow">
+        </div>
+        <div class="dropdown-menu">
+            <p class="dropdown-item">11:00 AM</p>
+            <p class="dropdown-item">11:15 AM</p>
+            <p class="dropdown-item">11:30 AM</p>
+            <p class="dropdown-item">11:45 AM</p>
+            <p class="dropdown-item">12:00 PM</p>
+        </div>
+        </div> -->
+
+        <hr class="mb-5 mt-5">
+
+        <!-- ORDER ITEM -->
+        <div class="order-edit-summary mb-2">
+            <img class="order-img" src="./img/food/egg-bacon.jpg" alt="bacon egg and cheese">
+
+            <div class="order-content">
+                <div class="order-top">
+                    <h4>Egg & Cheese</h4>
+
+                    <div class="order-edit-right">
+                        <h4 class="order-price">$5.00</h4>
+
+                        <button class="icon-btn delete-btn">
+                            <img class="icon" src="./img/trash-can.png" alt="Remove item">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="order-edit-bottom">
+                    <img class="edit-icon" src="./img/edit.png" alt="edit icon">
+
+                    <div class="quantity-option">
+                        <button class="icon-btn decrease-btn">
+                            <img class="icon" src="./img/minus.png" alt="Decrease quantity">
+                        </button>
+
+                        <h4 class="quantity-value">1</h4>
+
+                        <button class="icon-btn increase-btn">
+                            <img class="icon" src="./img/plus-fill.png" alt="Increase quantity">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ORDER ITEM -->
+        <div class="order-edit-summary mb-5">
+            <img class="order-img" src="./img/food/diet-coke.jpg" alt="diet coke image">
+
+            <div class="order-content">
+                <div class="order-top">
+                    <h4>Diet Coke</h4>
+
+                    <div class="order-edit-right">
+                        <h4 class="order-price">$2.00</h4>
+
+                        <button class="icon-btn delete-btn">
+                            <img class="icon" src="./img/trash-can.png" alt="Remove item">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="order-edit-bottom">
+                    <img class="edit-icon" src="./img/edit.png" alt="edit icon">
+
+                    <div class="quantity-option">
+                        <button class="icon-btn decrease-btn">
+                            <img class="icon" src="./img/minus.png" alt="Decrease quantity">
+                        </button>
+
+                        <h4 class="quantity-value">1</h4>
+
+                        <button class="icon-btn increase-btn">
+                            <img class="icon" src="./img/plus-fill.png" alt="Increase quantity">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mb-5">
+
+        <h2 class="mb-1">Want to Add a Side?</h2>
+
+        <div class="past-orders-scroll mb-4">
+            <div class="past-orders">
+                <img class="food-img" src="./img/food/egg-and-cheese-bagel.jpg" alt="egg-and-cheese">
+                <h4>Egg and Cheese</h4>
+                <div class="price-arrow">
+                    <p>$4.00</p>
+                    <div class="checkbox-icon">
+                        <svg class="icon-empty"  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="#45371F" stroke-width="1.5"/>
+                            <path d="M9 12H15" stroke="#45371F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 9L12 15" stroke="#45371F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg class="icon-filled" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" fill="#FCC5BE" stroke="#45371F" stroke-width="1.5"/>
+                            <path d="M9.5 11.5L11.5 13.5L15.5 9.5" stroke="#45371F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="past-orders">
+                <img class="food-img" src="./img/food/grilled-cheese.jpg" alt="grilled-cheese">
+                <h4>Grilled Cheese</h4>
+                <div class="price-arrow">
+                    <p>$6.00</p>
+                    <div class="checkbox-icon">
+                        <svg class="icon-empty"  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="#45371F" stroke-width="1.5"/>
+                            <path d="M9 12H15" stroke="#45371F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 9L12 15" stroke="#45371F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg class="icon-filled" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" fill="#FCC5BE" stroke="#45371F" stroke-width="1.5"/>
+                            <path d="M9.5 11.5L11.5 13.5L15.5 9.5" stroke="#45371F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="past-orders">
+                <img class="food-img" src="./img/food/chocolate-muffin.jpg" alt="muffin">
+                <h4>Muffin</h4>
+                <div class="price-arrow">
+                    <p>$1.75</p>
+                    <div class="checkbox-icon">
+                        <svg class="icon-empty"  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="#45371F" stroke-width="1.5"/>
+                            <path d="M9 12H15" stroke="#45371F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 9L12 15" stroke="#45371F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg class="icon-filled" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="5" fill="#FCC5BE" stroke="#45371F" stroke-width="1.5"/>
+                            <path d="M9.5 11.5L11.5 13.5L15.5 9.5" stroke="#45371F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="./checkout.html">
+            <div class="btn">
+                <h4>Proceed to Checkout ($7.00)</h4>
+            </div>
+        </a>
+    </div>
+</div>
+
+    <a href="index.html">
+        <img class="arrow-left mb-5" src="./img/arrow-left.png" alt="left arrow">
+    </a>
+
+    <div item-des-page>
+        <img class="food-img mb-3" src="./img/food/egg-and-cheese-bagel.jpg" alt="egg-and-cheese">
+        <h2 class="mb-2">Egg & Cheese</h2>
+        <p class="mb-2">Egg and cheese served on bread of your choice</p>
+        <p class="mb-5">$4.00</p>
+    </div>
+
+    <hr class="mb-5">
+    
+    <form id="order-form" method="POST" action="submit-order.php">
+
+        <h4 class="mb-3">Select Required Options</h4>
+
+        <!-- BREAD CUSTOMIZATION -->
+        <div class="customization-dropdown">
+            <div class="dropdown-header">
+                <p>* Bread [select one]</p>
+                <img class="icon arrow" src="./img/arrow-down.png" alt="down arrow">
+            </div>
+        <div class="dropdown-menu">
+            <label class="dropdown-item">
+                <input type="radio" name="bread" value="plain-bagel" required>
+                <img class="dropdown-img" src="./img/ingredients/plain-bagel.png" alt="">
+                <p>Plain Bagel</p>
+                <p>+$0.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="bread" value="everything-bagel" required>
+                <img class="dropdown-img" src="./img/ingredients/everything-bagel.png" alt="">
+                <p>Everything Bagel</p>
+                <p>+$0.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="bread" value="white-bread" required>
+                <img class="dropdown-img" src="./img/ingredients/white-bread.png" alt="">
+                <p>White Bread</p>
+                <p>+$0.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="bread" value="wheat-bread" required>
+                <img class="dropdown-img" src="./img/ingredients/wheat.png" alt="">
+                <p>Wheat Bread</p>
+                <p>+$0.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="bread" value="croissant" required>
+                <img class="dropdown-img" src="./img/ingredients/croissant.png" alt="">
+                <p>Croissant</p>
+                <p>+$0.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="bread" value="tortilla" required>
+                <img class="dropdown-img" src="./img/ingredients/tortilla.png" alt="">
+                <p>Tortilla</p>
+                <p>+$0.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="bread" value="pita" required>
+                <img class="dropdown-img" src="./img/ingredients/pita.png" alt="">
+                <p>Pita</p>
+                <p>+$0.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="bread" value="hoagie-roll" required>
+                <img class="dropdown-img" src="./img/ingredients/hoagie.png" alt="">
+                <p>Hoagie Roll</p>
+                <p>+$0.00</p>
+            </label>
+        </div>
+    </div>
+
+        <!-- TOAST CUSTOMIZATION -->
+        <div class="customization-dropdown">
+            <div class="dropdown-header">
+                <p>* Toast Levels [select one]</p>
+                <img class="icon arrow" src="./img/arrow-down.png" alt="down arrow">
+            </div>
+        <div class="dropdown-menu">
+            <label class="dropdown-item">
+                <input type="radio" name="toast-level" value="not-toasted" required>
+                <img class="dropdown-img" src="./img/ingredients/untoasted-1.png" alt="">
+                <p>Not Toasted</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="toast-level" value="level-1" required>
+                <img class="dropdown-img" src="./img/ingredients/toast-level-1.png" alt="">
+                <p>Level 1</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="toast-level" value="level-2" required>
+                <img class="dropdown-img" src="./img/ingredients/toast-level-2.png" alt="">
+                <p>Level 2</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="toast-level" value="level-3" required>
+                <img class="dropdown-img" src="./img/ingredients/toast-level-3.png" alt="">
+                <p>Level 3</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="toast-level" value="level-4" required>
+                <img class="dropdown-img" src="./img/ingredients/toast-level-4.png" alt="">
+                <p>Level 4</p>
+            </label>
+        </div>
+        </div>
+
+        <hr class="mb-5 mt-5">
+        <h4 class="mb-3">Select add-ons</h4>
+
+        <!-- MEAT CUSTOMIZATION -->
+        <div class="customization-dropdown">
+            <div class="dropdown-header">
+                <p>Extra Protein [optional]</p>
+                <img class="icon arrow" src="./img/arrow-down.png" alt="down arrow">
+            </div>
+        <div class="dropdown-menu">
+            <label class="dropdown-item">
+                <input type="radio" name="meat" value="egg" required>
+                <img class="dropdown-img" src="./img/ingredients/egg.png" alt="">
+                <p>Egg</p>
+                <p>+$1.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="meat" value="bacon" required>
+                <img class="dropdown-img" src="./img/ingredients/bacon.png" alt="">
+                <p>Bacon</p>
+                <p>+$1.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="meat" value="ham" required>
+                <img class="dropdown-img" src="./img/ingredients/ham.png" alt="">
+                <p>Ham</p>
+                <p>+$1.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="meat" value="turkey-bacon" required>
+                <img class="dropdown-img" src="./img/ingredients/turkey-bacon.png" alt="">
+                <p>Turkey Bacon</p>
+                <p>+$1.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="meat" value="sausage" required>
+                <img class="dropdown-img" src="./img/ingredients/sausage.png" alt="">
+                <p>Sausage</p>
+                <p>+$1.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="meat" value="pork-roll" required>
+                <img class="dropdown-img" src="./img/ingredients/porkroll.png" alt="">
+                <p>Pork Roll</p>
+                <p>+$1.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="meat" value="scrapple" required>
+                <img class="dropdown-img" src="./img/ingredients/scrapple.png" alt="">
+                <p>Scrapple</p>
+                <p>+$1.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="meat" value="hot-sausage" required>
+                <img class="dropdown-img" src="./img/ingredients/hot-sausage.png" alt="">
+                <p>Hot Sausage</p>
+                <p>+$2.00</p>
+            </label>
+        </div>
+    </div>
+
+        <!-- CHEESE CUSTOMIZATION -->
+        <div class="customization-dropdown">
+            <div class="dropdown-header">
+                <p>Cheese [optional]</p>
+                <img class="icon arrow" src="./img/arrow-down.png" alt="down arrow">
+            </div>
+        <div class="dropdown-menu">
+            <label class="dropdown-item">
+                <input type="radio" name="cheese" value="cheese" required>
+                <img class="dropdown-img" src="./img/ingredients/cheese.png" alt="">
+                <p>Extra Cheese</p>
+                <p>+$1.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="radio" name="cheese" value="no-cheese" required>
+                <img class="dropdown-img" src="./img/ingredients/no-cheese.png" alt="">
+                <p>No Cheese</p>
+                <p>+$0.00</p>
+            </label>
+        </div>
+        </div>
+
+        <!-- XTRA CUSTOMIZATION -->
+        <div class="customization-dropdown">
+            <div class="dropdown-header">
+                <p>Extra [optional]</p>
+                <img class="icon arrow" src="./img/arrow-down.png" alt="down arrow">
+            </div>
+        <div class="dropdown-menu">
+            <label class="dropdown-item">
+                <input type="checkbox" name="extras[]" value="hashbrown">
+                <img class="dropdown-img" src="./img/ingredients/hash brown.png" alt="">
+                <p>Hashbrown</p>
+                <p>+$1.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="checkbox" name="extras[]" value="salt">
+                <img class="dropdown-img" src="./img/ingredients/salt.png" alt="">
+                <p>Salt</p>
+                <p>+$0.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="checkbox" name="extras[]" value="pepper">
+                <img class="dropdown-img" src="./img/ingredients/pepper.png" alt="">
+                <p>Pepper</p>
+                <p>+$0.00</p>
+            </label>
+            <label class="dropdown-item">
+                <input type="checkbox" name="extras[]" value="ketchup">
+                <img class="dropdown-img" src="./img/ingredients/ketchup.png" alt="">
+                <p>Ketchup</p>
+                <p>+$0.00</p>
+            </label>
+        </div>
+        </div>
+
+        <hr class="mb-5 mt-5">
+
+        <div class="quantity">
+            <h4>Quantity</h4>
+            <div class="quantity-option">
+                <button class="qty-btn" id="decrease">
+                    <img class="icon" src="./img/minus.png" alt="Decrease quantity">
+                </button>
+
+                <h4 id="quantity-value">1</h4>
+
+
+                <button class="qty-btn" id="increase">
+                    <img class="icon" src="./img/plus-fill.png" alt="Increase quantity">
+                </button>
+            </div>
+        </div>
+
+        <div class="add-to-favorites">
+            <h4>Add to favorites?</h4>
+            <svg class="add-to-favorites-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.66275 13.2135L9.82377 19.7065C11.0068 20.9532 12.9932 20.9532 14.1762 19.7065L20.3372 13.2135C22.5542 10.877 22.5543 7.08882 20.3373 4.75235C18.1203 2.41588 14.5258 2.41588 12.3088 4.75235C12.1409 4.92925 11.8591 4.92925 11.6912 4.75235C9.47421 2.41588 5.87975 2.41588 3.66275 4.75235C1.44575 7.08883 1.44575 10.877 3.66275 13.2135Z" fill="white" stroke="black"/>
+                </svg>                
+        </div>
+
+        <div class="btn mt-5"  onclick="openModal()">
+            <h4>Add to bag</h4>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+<script>
+function openModal() {
+    document.body.style.overflow = 'hidden';
+    
+    const modal = document.querySelector('.bottom-modal');
+    const overlay = document.querySelector('.modal-overlay');
+    const container = document.querySelector('.iphone-container');
+    
+    const containerRect = container.getBoundingClientRect();
+    const containerBottom = window.innerHeight - containerRect.bottom;
+    
+    modal.style.bottom = containerBottom + 'px';
+    modal.style.maxHeight = (containerRect.height - 64) + 'px';
+    
+    overlay.style.bottom = containerBottom + 'px';
+    overlay.style.top = containerRect.top + 'px';
+    overlay.style.height = containerRect.height + 'px';
+
+    modal.style.display = 'flex';
+    overlay.style.display = 'block';
+
+    requestAnimationFrame(() => {
+        modal.classList.add('active');
+        overlay.classList.add('active');
+    });
+}
+
+function closeModal() {
+    document.body.style.overflow = '';
+
+    const modal = document.querySelector('.bottom-modal');
+    const overlay = document.querySelector('.modal-overlay');
+
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+
+    setTimeout(() => {
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
+    }, 350);
+     
+    document.querySelector('.nav').classList.remove('hidden');
+}
+
+document.querySelectorAll('.customization-dropdown').forEach(dropdown => {
+  const header = dropdown.querySelector('.dropdown-header');
+  if (header) {
+    header.addEventListener('click', () => {
+      dropdown.classList.toggle('active');
+    });
+  }
+});
+
+document.querySelectorAll('.schedule-dropdown').forEach(dropdown => {
+    const header = dropdown.querySelector('.dropdown-header');
+    const headerText = header.querySelector('h4');
+
+    header.addEventListener('click', () => {
+        dropdown.classList.toggle('active');
+    });
+
+    dropdown.querySelectorAll('#time-options label').forEach(label => {
+        label.addEventListener('click', () => {
+            headerText.textContent = label.textContent.trim();
+            header.style.background = '#FFF1EF';
+            dropdown.classList.remove('active');
+        });
+    });
+});
+
+  const decreaseBtn = document.getElementById('decrease');
+  const increaseBtn = document.getElementById('increase');
+  const quantityValue = document.getElementById('quantity-value');
+
+  let quantity = 1;
+
+increaseBtn.addEventListener('click', (e) => {
+  e.preventDefault(); // ADD THIS
+  quantity++;
+  quantityValue.textContent = quantity;
+});
+
+decreaseBtn.addEventListener('click', (e) => {
+  e.preventDefault(); // ADD THIS
+  if (quantity > 1) {
+    quantity--;
+    quantityValue.textContent = quantity;
+  }
+});
+
+  document.querySelectorAll('.order-edit-summary').forEach(orderItem => {
+
+  const increaseBtn = orderItem.querySelector('.increase-btn');
+  const decreaseBtn = orderItem.querySelector('.decrease-btn');
+  const quantityText = orderItem.querySelector('.quantity-value');
+  const deleteBtn = orderItem.querySelector('.delete-btn');
+
+  let quantity = parseInt(quantityText.textContent);
+
+  if (increaseBtn) {
+    increaseBtn.addEventListener('click', () => {
+      quantity++;
+      quantityText.textContent = quantity;
+    });
+  }
+
+  if (decreaseBtn) {
+    decreaseBtn.addEventListener('click', () => {
+      if (quantity > 1) {
+        quantity--;
+        quantityText.textContent = quantity;
+      }
+    });
+  }
+
+  if (deleteBtn) {
+    deleteBtn.addEventListener('click', () => {
+        orderItem.style.transition = 'opacity 0.3s ease';
+        orderItem.style.opacity = '0';
+
+        setTimeout(() => {
+            orderItem.remove();
+        }, 300); // matches transition duration
+    });
+}
+
+});
+
+// Handle customization dropdown selections
+document.querySelectorAll('.customization-dropdown').forEach(dropdown => {
+  const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+  const dropdownHeader = dropdown.querySelector('.dropdown-header');
+  
+  dropdownMenu.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', () => {
+      // Remove active class from all items in this dropdown
+      dropdownMenu.querySelectorAll('.dropdown-item').forEach(i => {
+        i.classList.remove('selected');
+        i.style.background = '';
+        i.style.border = '1px solid #45371F';
+      });
+      
+      // Add active class to clicked item
+      item.classList.add('selected');
+      item.style.background = '#FCC5BE';
+      item.style.border = '2px solid #45371F';
+      
+      // Get the image and text from selected item
+      const img = item.querySelector('.dropdown-img');
+      const text = item.querySelector('p');
+      
+      if (img && text) {
+        // Check if selection display already exists
+        let selectionDisplay = dropdown.querySelector('.selection-display');
+        
+        if (!selectionDisplay) {
+          // Create the selection display div
+          selectionDisplay = document.createElement('div');
+          selectionDisplay.className = 'selection-display';
+          selectionDisplay.style.cssText = `
+            display: flex;
+            gap: 8px;
+            padding: 12px 16px;
+            background: var(--color-background);
+            border-top: 1px solid var(--color-dark-primary);
+          `;
+          
+          // Insert it before the dropdown menu
+          dropdown.insertBefore(selectionDisplay, dropdownMenu);
+        }
+        
+        // Clear and populate selection display
+        selectionDisplay.innerHTML = `
+          <div style="
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            background: #FCC5BE;
+            border-radius: 8px;
+            border: 1px solid #45371F;
+          ">
+            <img src="${img.src}" alt="${text.textContent}" style="width: 48px; height: 48px;">
+            <button class="remove-selection" style="
+              position: absolute;
+              top: -8px;
+              right: -8px;
+              width: 24px;
+              height: 24px;
+              background: #FCC5BE;
+              border: 1px solid #45371F;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              padding: 0;
+            ">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M1 1L11 11M1 11L11 1" stroke="#45371F" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <div style="display: flex; flex-direction: column; justify-content: center;">
+            <p style="font-weight: 700; margin: 0;">${text.textContent}</p>
+          </div>
+        `;
+        
+        // Add click handler to remove button
+        const removeBtn = selectionDisplay.querySelector('.remove-selection');
+        removeBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          selectionDisplay.remove();
+          item.classList.remove('selected');
+          item.style.background = '';
+          item.style.border = '1px solid #45371F';
+        });
+      }
+      
+      // Close the dropdown after selection
+      dropdown.classList.remove('active');
+    });
+  });
+});
+
+document.querySelector('.add-to-favorites-icon').addEventListener('click', function() {
+    const path = this.querySelector('path');
+    path.style.transition = 'fill 0.3s ease';
+    path.style.cursor = 'pointer';
+    const isFilled = path.getAttribute('fill') === '#F1513B';
+    path.setAttribute('fill', isFilled ? 'white' : '#F1513B');
+});
+
+const pastOrders = document.querySelectorAll('.past-orders');
+
+pastOrders.forEach(order => {
+    order.addEventListener('click', () => {
+
+        pastOrders.forEach(item => {
+            item.querySelector('.checkbox-icon').classList.remove('checked');
+        });
+
+        order.querySelector('.checkbox-icon').classList.add('checked');
+    });
+});
+
+// allows clicking on the arrow inside the modal to close the modal
+document.getElementById('modal-back-btn').addEventListener('click', () => {
+    closeModal();
+});
+</script>

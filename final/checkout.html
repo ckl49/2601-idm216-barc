@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./css/global.css">
+</head>
+<body>
+<div class="iphone-container">
+
+    <a href="./food-item.html">
+        <img class="arrow-left mb-5" src="./img/arrow-left.png" alt="left arrow">
+    </a>
+
+    <h2 class="mb-4">Select Payment Method</h2>
+
+    <div class="payment-method mb-2" data-method="card">
+        <div class="payment-left">
+            <img class="payment-img" src="./img/debit.png" alt="debit card image">
+            <p>Debit/Credit Card</p>
+        </div>
+        <div class="checkbox-icon">
+            <svg class="icon-empty" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="#45371F" stroke-width="1.5"/>
+                </svg>
+            <svg class="icon-filled" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" fill="#FCC5BE" stroke="#45371F" stroke-width="1.5"/>
+                <path d="M9.5 11.5L11.5 13.5L15.5 9.5" stroke="#45371F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="payment-method mb-2" data-method="card">
+        <div class="payment-left">
+            <img class="payment-img" src="./img/apple.png" alt="apple pay image">
+            <p>Apple Pay</p>
+        </div>
+        <div class="checkbox-icon">
+            <svg class="icon-empty" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="#45371F" stroke-width="1.5"/>
+                </svg>
+            <svg class="icon-filled" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" fill="#FCC5BE" stroke="#45371F" stroke-width="1.5"/>
+                <path d="M9.5 11.5L11.5 13.5L15.5 9.5" stroke="#45371F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="payment-method mb-2" data-method="card">
+        <div class="payment-left">
+            <img class="payment-img" src="./img/paypal.png" alt="paypal image">
+            <p>Paypal</p>
+        </div>
+        <div class="checkbox-icon">
+            <svg class="icon-empty" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="#45371F" stroke-width="1.5"/>
+                </svg>
+            <svg class="icon-filled" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" fill="#FCC5BE" stroke="#45371F" stroke-width="1.5"/>
+                <path d="M9.5 11.5L11.5 13.5L15.5 9.5" stroke="#45371F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="payment-method mb-5" data-method="card">
+        <div class="payment-left">
+            <img class="payment-img" src="./img/venmo.png" alt="venmo image">
+            <p>Venmo</p>
+        </div>
+        <div class="checkbox-icon">
+            <svg class="icon-empty" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="#45371F" stroke-width="1.5"/>
+                </svg>
+            <svg class="icon-filled" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="5" fill="#FCC5BE" stroke="#45371F" stroke-width="1.5"/>
+                <path d="M9.5 11.5L11.5 13.5L15.5 9.5" stroke="#45371F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+
+    <hr class="mb-5">
+
+    <!-- <h2 class="mb-4">Available Rewards</h2>
+
+    <div class="rewards-checkout mb-2">
+        <div class="left-rewards">
+            <img class="gift-icon" src="./img/gift.png" alt="gift icon">
+            <div class="reward-text">
+                <h4>Free Drink</h4>
+                <p>150 pts</p>
+            </div>
+        </div>
+        <div class="apply-reward-text-box">
+            <p>Apply Reward</p>
+        </div>
+    </div>
+
+        <div class="rewards-checkout mb-5">
+        <div class="left-rewards">
+            <img class="gift-icon" src="./img/gift.png" alt="gift icon">
+            <div class="reward-text">
+                <h4>$2.00 Off</h4>
+                <p>270 pts</p>
+            </div>
+        </div>
+        <div class="apply-reward-text-box">
+            <p>Apply Reward</p>
+        </div>
+    </div>
+
+    <hr class="mb-5"> -->
+
+    <h2 class="mb-4">Add Tip?</h2>
+
+    <div class="add-tip mb-5">
+        <label class="tip">
+            <input type="radio" name="tip" value="10" hidden>
+            <h4>10%</h4>
+            <p>$0.70</p>
+        </label>
+
+        <label class="tip">
+            <input type="radio" name="tip" value="15" hidden>
+            <h4>15%</h4>
+            <p>$1.05</p>
+        </label>
+
+        <label class="tip">
+            <input type="radio" name="tip" value="20" hidden>
+            <h4>20%</h4>
+            <p>$1.40</p>
+        </label>
+
+        <label class="tip">
+            <input type="radio" name="tip" value="25" hidden>
+            <h4>25%</h4>
+            <p>$2.10</p>
+        </label>
+    </div>
+
+    <hr class="mb-5">
+
+    <h2 class="mb-4">Price Breakdown</h2>
+
+    <div class="cost-breakdown mb-3">
+        <p>1x Egg & Cheese, +bacon</p>
+        <p>$4.00</p>
+    </div>
+
+    <div class="cost-breakdown mb-5">
+        <p>1x Diet Coke</p>
+        <p>$2.00</p>
+    </div>
+
+    <div class="cost-breakdown mb-3">
+        <p>Tip (0%)</p>
+        <p>$0.00</p>
+    </div>
+
+    <div class="cost-breakdown mb-5">
+        <p>Tax</p>
+        <p>$1.34</p>
+    </div>
+
+    <div class="cost-breakdown mb-5 mt-8">
+        <h6>Total</h6>
+        <h6>$8.34</h6>
+    </div>
+
+    <div class="btn" id="place-order-btn">
+        <h4>Place Order</h4>
+    </div>
+
+
+    </div>
+
+    <div id="apple-pay-overlay" 
+        style="display:none; position:fixed; z-index:9999; justify-content:center; align-items:center; cursor:pointer; border-radius:24px; background:rgba(0,0,0,0.7);">
+        <img src="./img/apple-pay-overlay.png" alt="Apple Pay" style="width:100%; height:100%; object-fit:cover; border-radius:24px; pointer-events:none;">
+    </div>
+
+    <script>
+        document.getElementById('place-order-btn').addEventListener('click', function() {
+        const overlay = document.getElementById('apple-pay-overlay');
+        const container = document.querySelector('.iphone-container');
+        const rect = container.getBoundingClientRect();
+
+        overlay.style.top = rect.top + 'px';
+        overlay.style.left = rect.left + 'px';
+        overlay.style.width = rect.width + 'px';
+        overlay.style.height = rect.height + 'px';
+        overlay.style.display = 'flex';
+        });
+
+        document.getElementById('apple-pay-overlay').addEventListener('click', function() {
+        window.location.href = './order-confirmation.html';
+        });
+    </script>
+</body>
+</html>
+
+<script>
+    const paymentMethods = document.querySelectorAll('.payment-method'); // missing this line
+
+    paymentMethods.forEach(method => {
+        method.addEventListener('click', () => {
+
+            paymentMethods.forEach(item => {
+                item.querySelector('.checkbox-icon').classList.remove('checked');
+            });
+
+            method.querySelector('.checkbox-icon').classList.add('checked');
+        });
+    });
+
+
+    const rewards = document.querySelectorAll('.rewards-checkout');
+
+    rewards.forEach(reward => {
+    reward.addEventListener('click', () => {
+
+        rewards.forEach(item => {
+        item.style.backgroundColor = '';
+        item.style.opacity = '0.5';
+
+        const box = item.querySelector('.apply-reward-text-box');
+        box.style.backgroundColor = '';
+        
+        const text = box.querySelector('p');
+        text.textContent = 'Apply Reward';
+        });
+
+        reward.style.backgroundColor = '#FFF1EF';
+        reward.style.opacity = '1';
+
+        const selectedBox = reward.querySelector('.apply-reward-text-box');
+        selectedBox.style.backgroundColor = '#FCC5BE';
+
+        const selectedText = selectedBox.querySelector('p');
+        selectedText.textContent = 'Applied!';
+    });
+    });
+
+
+    const tips = document.querySelectorAll('.tip');
+
+    tips.forEach(tip => {
+        tip.addEventListener('click', (e) => {
+            e.preventDefault(); // prevent radio default behavior
+
+            const isActive = tip.classList.contains('active');
+
+            tips.forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('input').checked = false;
+            });
+
+            if (!isActive) {
+                tip.classList.add('active');
+                tip.querySelector('input').checked = true;
+            }
+        });
+    });
+</script>
